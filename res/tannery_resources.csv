@@ -1,0 +1,5 @@
+NAME,ID,CRAFT MATERIALS:AMOUNT
+Cuoio Grezzo,coarse_leather,raw_hide:4
+Cuoio Robusto,rugged_leather,coarse_leather:4,tannin:1
+Cuoio Multistrato,layered_leather,thick_hide:6,rugged_leather:2,tannin:1
+Cuoio Impregnato,infused_leather,iron_hide:8,layered_leather:2,tannin:1

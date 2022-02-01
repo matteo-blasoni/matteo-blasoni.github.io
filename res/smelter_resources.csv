@@ -1,0 +1,10 @@
+NAME,ID,CRAFT MATERIALS:AMOUNT
+Carbone,charcoal,wood:2
+Lingotto di Ferro,iron_ingot,iron_ore:4
+Lingotto di Argento,silver_ingot,silver_ore:4
+Lingotto di Acciaio,steel_ingot,iron_ingot:3,flux:1,charcoal:2
+Lingotto di Oro,gold_ingot,gold_ore:5,flux:1,silver_ingot:2
+Lingotto di Starmetal,starmetal_ingot,starmetal_ore:6,flux:1,steel_ingot:2,charcoal:2
+Lingotto di Platino,platinum_ingot,platinum_ore:6,flux:1,gold_ingot:2
+Lingotto di Platino,platinum_ingot,platinum_ore:6,flux:1,gold_ingot:2
+Lingotto di Platino,platinum_ingot,platinum_ore:6,flux:1,gold_ingot:2

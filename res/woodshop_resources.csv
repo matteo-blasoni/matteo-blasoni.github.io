@@ -1,0 +1,5 @@
+NAME,ID,CRAFT MATERIALS:AMOUNT
+Tavole di Legno,timber,green_wood:4
+Legname,lumber,aged_wood:4,timber:2,sandpaper:1
+Assi di Wyrd,wyrd_planks,wyrd_wood:6,lumber:2,sandpaper:1
+Assi di Legnoferro,ironwood_planks,ironwood:8,wyrd_planks:2,sandpaper:1
