@@ -6,6 +6,9 @@ Minerale Stellare,starmetal_ore
 Minerale di Argento,silver_ore
 Minerale di Oro,gold_ore
 Minerale di Platino,platinum_ore
+Minerale di Oricalco,orichalcum_ore
+Cinabro,cinnabar
+Tolvium,tolvium
 Legno Verde,green_wood
 Carta Vetrata,sandpaper
 Legno Invecchiato,aged_wood
@@ -19,4 +22,4 @@ Pelle non Conciata,raw_hide
 Tannino,tannin
 Pelle Spessa,thick_hide
 Pelle Ferrea,iron_hide
-Particella,particle
+Particella,mote

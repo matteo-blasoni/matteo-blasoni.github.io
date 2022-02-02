@@ -1,8 +1,8 @@
 var craftAmount = 1000;
 
-var matTemplate = document.getElementById("mat-template");
-var paramTemplate = document.getElementById("mat-param-template");
-var view = document.querySelector(".view");
+var cardTemplate = document.getElementById("card-template");
+var costTemplate = document.getElementById("cost-template");
+var cardContainer = document.querySelector(".card-container");
 
 var smelter = document.getElementById("smelter");
 var loom = document.getElementById("loom");
@@ -11,103 +11,123 @@ var woodshop = document.getElementById("woodshop");
 var arcana = document.getElementById("arcana");
 
 smelter.addEventListener("click", (_) => {
-  view.innerHTML = "";
+  cardContainer.innerHTML = "";
   smelterResources.forEach((r) => addResource(r));
 });
 
 loom.addEventListener("click", (_) => {
-  view.innerHTML = "";
+  cardContainer.innerHTML = "";
   loomResources.forEach((r) => addResource(r));
 });
 
 tannery.addEventListener("click", (_) => {
-  view.innerHTML = "";
+  cardContainer.innerHTML = "";
   tanneryResources.forEach((r) => addResource(r));
 });
 
 woodshop.addEventListener("click", (_) => {
-  view.innerHTML = "";
+  cardContainer.innerHTML = "";
   woodshopResources.forEach((r) => addResource(r));
 });
 
 arcana.addEventListener("click", (_) => {
-  view.innerHTML = "";
+  cardContainer.innerHTML = "";
   arcanaResources.forEach((r) => addResource(r));
 });
 
 smelterResources.forEach((r) => addResource(r));
 
 function addResource(res) {
-  var matClone = matTemplate.content.cloneNode(true);
+  var cardClone = cardTemplate.content.cloneNode(true);
 
-  var mat = matClone.querySelector(".mat");
-  var name = matClone.querySelector(".mat-name");
-  var icon = matClone.querySelector(".mat-icon");
+  var name = cardClone.getElementById("resource-name");
+  var icon = cardClone.getElementById("resource-icon");
 
-  var priceIn = matClone.getElementById("mat-price");
-  var rateIn = matClone.getElementById("mat-rate");
+  var priceInput = cardClone.getElementById("price-input");
+  var chanceInput = cardClone.getElementById("chance-input");
+  var amountInput = cardClone.getElementById("amount-input");
 
-  priceIn.value = res.MarketPrice;
-  rateIn.value = res.ReturnRate;
+  var totalCostOutput = cardClone.getElementById("total-cost-output");
+  var totalAmountOutput = cardClone.getElementById("total-amount-output");
+  var profitOutput = cardClone.getElementById("profit-output");
 
-  priceIn.addEventListener("input", (_) => {
-    res.MarketPrice = parseFloat(priceIn.value);
+  priceInput.value = res.MarketPrice;
+  chanceInput.value = res.ReturnRate;
+  amountInput.value = 1000;
+
+  priceInput.addEventListener("input", (_) => {
+    res.MarketPrice = parseFloat(priceInput.value);
     res.calculateUnitValue(true);
-    console.log("changing price");
   });
 
-  rateIn.addEventListener("input", (_) => {
-    res.ReturnRate = parseFloat(rateIn.value);
+  chanceInput.addEventListener("input", (_) => {
+    res.ReturnRate = parseFloat(chanceInput.value);
     res.calculateUnitValue(true);
-    console.log(res);
+  });
+
+  amountInput.addEventListener("input", (_) => {
+    res.Amount = parseInt(amountInput.value);
+    res.calculateUnitValue(true);
   });
 
   res.onValueChanged((_) => {
-    if (res.getUnitValue() < res.MarketPrice) {
-      mat.style.backgroundColor = "#b2cf7f";
+    totalCostOutput.value = res.getTotalCost();
+    totalAmountOutput.value = res.getTotalAmount();
+
+    var profit = res.calculateProfit();
+    profitOutput.value = profit;
+
+    //check best price
+    if (profit > 0) {
+      profitOutput.style.backgroundColor = "#80db5c";
+      icon.style.borderColor = "#80db5c";
+      name.style.color = "#80db5c";
     } else {
-      mat.style.backgroundColor = "#cf9c7f";
+      profitOutput.style.backgroundColor = "#e95f5f";
+      icon.style.borderColor = "#e95f5f";
+      name.style.color = "#e95f5f";
     }
   });
 
-  name.innerHTML = "<b>" + res.Name.toUpperCase() + ":" + "</b>";
+  name.innerHTML = res.Name.toUpperCase();
   icon.src = "/images/icons/" + res.Id + ".png";
 
   res.CraftMaterials.forEach((cm) => {
-    addParam(res, matClone, cm);
+    addParam(res, cardClone, cm);
   });
 
-  view.appendChild(matClone);
+  res.calculateUnitValue();
+  cardContainer.appendChild(cardClone);
 }
 
-function addParam(res, matClone, craftMat) {
-  var paramClone = paramTemplate.content.cloneNode(true);
-  var craftRes = searchResource(craftMat.Id);
+function addParam(res, cardClone, matCost) {
+  var costClone = costTemplate.content.cloneNode(true);
+  var costResource = searchResource(matCost.Id);
 
-  var resText = paramClone.querySelector("p");
-  var resCostIn = paramClone.querySelector("input");
+  var costIcon = costClone.querySelector(".cost-icon");
+  var costInput = costClone.getElementById("cost-input");
 
-  resText.innerHTML = craftRes.Name + " (" + craftMat.Amount + ")";
-  resCostIn.disabled = craftRes.IsCraftable;
+  costIcon.src = "/images/icons/" + matCost.Id + ".png";
+  costInput.disabled = costResource.IsCraftable;
 
-  craftRes.calculateUnitValue(true);
-  resCostIn.value = craftRes.getUnitValue();
+  costResource.calculateUnitValue(true);
+  costInput.value = costResource.getUnitValue();
 
-  craftRes.onValueChanged((_) => {
-    resCostIn.value = craftRes.getUnitValue();
+  costResource.onValueChanged((_) => {
+    costInput.value = costResource.getUnitValue();
   });
 
-  resCostIn.addEventListener("input", (_) => {
-    craftRes.MarketPrice = parseFloat(resCostIn.value);
-    craftRes.calculateUnitValue();
+  costInput.addEventListener("input", (_) => {
+    costResource.MarketPrice = parseFloat(costInput.value);
+    costResource.calculateUnitValue();
     res.calculateUnitValue();
   });
 
-  resCostIn.addEventListener("change", (_) => {
-    craftRes.MarketPrice = parseFloat(resCostIn.value);
-    craftRes.calculateUnitValue(true);
+  costInput.addEventListener("change", (_) => {
+    costResource.MarketPrice = parseFloat(costInput.value);
+    costResource.calculateUnitValue(true);
     res.calculateUnitValue(true);
   });
 
-  matClone.querySelector(".mat").appendChild(paramClone);
+  cardClone.querySelector(".resources").appendChild(costClone);
 }

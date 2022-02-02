@@ -31,13 +31,24 @@ input[type="number"] {
   height: 25px;
   width: 50px;
   border-style: solid;
+  border: 1px solid black;
   border-radius: 10px;
+}
+
+.param-input:disabled {
+  color: black;
+  border-style: solid;
+}
+
+.output {
+  color: black;
+  background-color: white;
 }
 
 .round-image {
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 4px solid white;
 }
 
 .navigation {
@@ -46,6 +57,14 @@ input[type="number"] {
   height: 5%;
   width: 100%;
   background-color: rgb(108, 118, 119);
+}
+
+.jobs-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px 100px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 730px) {
@@ -97,8 +116,8 @@ input[type="number"] {
   max-height: 400px;
   width: 360px;
   border-radius: 25px;
-  border: 3px solid rgb(56, 95, 100);
-  background-color: rgb(32, 55, 85);
+  border: 3px solid #385f64;
+  background-color: #203755;
   color: white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   letter-spacing: 3px;
@@ -121,7 +140,7 @@ input[type="number"] {
 }
 
 .card-header img {
-  height: 85%;
+  height: 70%;
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -258,74 +277,4 @@ input[type="number"] {
   margin-left: 5px;
   height: 20px;
   border: 1px solid black;
-}
-
-.jobs-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px 100px;
-  flex-wrap: wrap;
-}
-
-.view {
-  position: relative;
-  top: 130px;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding-bottom: 20px;
-}
-
-.mat {
-  padding: 0.5rem;
-  background-color: #cf9c7f;
-  border: 2px solid #312f2f;
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-  gap: 17px;
-  border-radius: 15px;
-}
-
-.mat-name {
-  width: 8rem;
-}
-
-.mat-param {
-  min-width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.mat-param p {
-  margin: 0;
-}
-
-#mat-cost {
-  margin-left: 20px;
-}
-
-.mat-param input {
-  padding-left: 10px;
-  font-size: 16px;
-  height: 1.5em;
-  width: 60px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.mat-param input:disabled {
-  color: black;
-  background-color: rgb(189, 186, 186);
-}
-
-.mat-icon {
-  height: 4rem;
-  aspect-ratio: 1;
 }

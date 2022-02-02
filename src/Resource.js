@@ -9,8 +9,11 @@ class Resource {
   MarketPrice;
   IsCraftable;
   ReturnRate;
+  Amount = 1000;
   CraftMaterials = [];
 
+  #totalAmount;
+  #totalCost;
   #unitValue;
 
   #callbacks = [];
@@ -23,16 +26,22 @@ class Resource {
     var unitCost = Infinity;
 
     if (this.IsCraftable) {
-      var craftCost = 0;
+      this.#totalCost = 0;
 
       this.CraftMaterials.forEach((cm) => {
         var matPrice = searchResource(cm.Id).MarketPrice;
 
-        craftCost += matPrice * cm.Amount * craftAmount;
+        this.#totalCost += matPrice * cm.Amount * this.Amount;
       });
 
-      unitCost =
-        craftCost / (craftAmount + (craftAmount * this.ReturnRate) / 100);
+      this.#totalCost = this.#totalCost.toFixed(2);
+
+      this.#totalAmount = (
+        this.Amount +
+        (this.Amount * this.ReturnRate) / 100
+      ).toFixed(0);
+
+      unitCost = this.#totalCost / this.#totalAmount;
     }
 
     if (fixed) {
@@ -47,8 +56,20 @@ class Resource {
     });
   }
 
+  getTotalCost() {
+    return this.#totalCost;
+  }
+
+  getTotalAmount() {
+    return this.#totalAmount;
+  }
+
   getUnitValue() {
     return this.#unitValue;
+  }
+
+  calculateProfit() {
+    return this.#totalAmount * this.MarketPrice - this.#totalCost;
   }
 }
 
