@@ -112,12 +112,12 @@ function resourceParser(data, craftable) {
 
   res.Name = data[0];
   res.Id = data[1];
-  res.MarketPrice = 0;
+  res.MarketPrice = parseFloat(data[2]);
   res.ReturnRate = 0;
   res.IsCraftable = craftable;
 
   if (craftable) {
-    for (let i = 2; i < data.length; i++) {
+    for (let i = 3; i < data.length; i++) {
       var matData = data[i].split(":");
       var craftMat = new CraftMaterial();
 

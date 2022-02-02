@@ -59,7 +59,7 @@ function addResource(res) {
 
   priceInput.value = res.MarketPrice;
   chanceInput.value = res.ReturnRate;
-  amountInput.value = 1000;
+  amountInput.value = 100;
 
   priceInput.addEventListener("input", (_) => {
     res.MarketPrice = parseFloat(priceInput.value);

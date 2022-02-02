@@ -1,4 +1,4 @@
-NAME,ID,CRAFT MATERIALS:AMOUNT
-Soffio,wisp,mote:5
-Essenza,essence,wisp:4
-Quintessenza,quintessence,essence:3
+NAME,ID,PRICE,CRAFT MATERIALS:AMOUNT
+Soffio,wisp,23.2,mote:5
+Essenza,essence,33,wisp:4
+Quintessenza,quintessence,94.8,essence:3

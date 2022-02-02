@@ -1,30 +1,30 @@
-NAME,ID
-Fondente,flux
-Legno,wood
-Minerale di Ferro,iron_ore
-Minerale Stellare,starmetal_ore
-Minerale di Argento,silver_ore
-Minerale di Oro,gold_ore
-Minerale di Platino,platinum_ore
-Minerale di Oricalco,orichalcum_ore
-Cinabro,cinnabar
-Tolvium,tolvium
-Legno Verde,green_wood
-Carta Vetrata,sandpaper
-Legno Invecchiato,aged_wood
-Legno di Wyrd,wyrd_wood
-Legnoferro,ironwood
-Fibre,fibers
-Trama,cloth_weave
-Fili di Seta,silk_threads
-Fibra Intrecciante,wirefiber
-Pelle non Conciata,raw_hide
-Tannino,tannin
-Pelle Spessa,thick_hide
-Pelle Ferrea,iron_hide
-Particella,mote
-Pietra,stone
-Magnetite,lodestone
-Magnetite Ardente,loamy_lodestone
-Solvente,solvent
-Gemma Imperfetta,flawed_gem
+NAME,ID,PRICE
+Fondente,flux,0.4
+Legno,wood,0.1
+Minerale di Ferro,iron_ore,0.1
+Minerale Stellare,starmetal_ore,0.8
+Minerale di Argento,silver_ore,0.1
+Minerale di Oro,gold_ore,0.25
+Minerale di Platino,platinum_ore,0.8
+Minerale di Oricalco,orichalcum_ore,1.9
+Cinabro,cinnabar,9.8
+Tolvium,tolvium,9.9
+Legno Verde,green_wood,0.1
+Carta Vetrata,sandpaper,0.6
+Legno Invecchiato,aged_wood,0.1
+Legno di Wyrd,wyrd_wood,0.6
+Legnoferro,ironwood,0.5
+Fibre,fibers,0.16
+Trama,cloth_weave,0.01
+Fili di Seta,silk_threads,0.25
+Fibra Intrecciante,wirefiber,0.35
+Pelle non Conciata,raw_hide,0.25
+Tannino,tannin,0.01
+Pelle Spessa,thick_hide,0.4
+Pelle Ferrea,iron_hide,0.07
+Particella,mote,1.5
+Pietra,stone,0.25
+Magnetite,lodestone,1.47
+Magnetite Ardente,loamy_lodestone,1.5
+Solvente,solvent,0.45
+Gemma Imperfetta,flawed_gem,1

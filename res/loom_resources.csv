@@ -1,5 +1,5 @@
 NAME,ID,CRAFT MATERIALS:AMOUNT
-Lino,linen,fibers:4
-Raso,sateen,linen:4,cloth_weave:1
-Seta,silk,silk_threads:6,sateen:2,cloth_weave:1
-Seta Impregnata,infused_silk,wirefiber:8,silk:2,cloth_weave:1
+Lino,linen,0.82,fibers:4
+Raso,sateen,1.5,linen:4,cloth_weave:1
+Seta,silk,3.5,silk_threads:6,sateen:2,cloth_weave:1
+Seta Impregnata,infused_silk,8.35,wirefiber:8,silk:2,cloth_weave:1

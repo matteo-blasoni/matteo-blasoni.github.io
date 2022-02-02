@@ -1,12 +1,12 @@
 NAME,ID,CRAFT MATERIALS:AMOUNT
-Blocco di Pietra,stone_block,stone:4
-Mattone di Pietra,stone_brick,stone_block:4,sandpaper:1
-Mattone di Magnetite,lodestone_brick,lodestone:6,stone_brick:2,sandpaper:1
-Pietra del Vuoto di Ossidiana,obsidian_voidstone,lodestone_brick:8,lodestone:2,sandpaper:1,loamy_lodestone:1
-Gemma Imperfetta Tagliata,cut_flawed_gem,flawed_gem:1,mote:2
-Gemma Comune,common_gem,flawed_gem:3,wisp:1,solvent:2
-Gemma Comune Tagliata,cut_common_gem,common_gem:1,wisp:2,solvent:2
-Gemma Brillante,brilliant_gem,common_gem:4,essence:1,solvent:2
-Gemma Brillante Tagliata,cut_brilliant_gem,brilliant_gem:1,essence:2,solvent:2
-Gemma Pura,pristine_gem,brilliant_gem:5,quintessence:1,solvent:2
-Gemma Pura Tagliata,cut_pristine_gem,pristine_gem:1,quintessence:3,solvent:2
+Blocco di Pietra,stone_block,0.98,stone:4
+Mattone di Pietra,stone_brick,1.98,stone_block:4,sandpaper:1
+Mattone di Magnetite,lodestone_brick,5.95,lodestone:6,stone_brick:2,sandpaper:1
+Pietra del Vuoto di Ossidiana,obsidian_voidstone,29,lodestone_brick:8,lodestone:2,sandpaper:1,loamy_lodestone:1
+Gemma Imperfetta Tagliata,cut_flawed_gem,1,flawed_gem:1,mote:2
+Gemma Comune,common_gem,1.6,flawed_gem:3,wisp:1,solvent:2
+Gemma Comune Tagliata,cut_common_gem,5,common_gem:1,wisp:2,solvent:2
+Gemma Brillante,brilliant_gem,15,common_gem:4,essence:1,solvent:2
+Gemma Brillante Tagliata,cut_brilliant_gem,60,brilliant_gem:1,essence:2,solvent:2
+Gemma Pura,pristine_gem,35,brilliant_gem:5,quintessence:1,solvent:2
+Gemma Pura Tagliata,cut_pristine_gem,150,pristine_gem:1,quintessence:3,solvent:2

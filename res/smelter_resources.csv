@@ -1,11 +1,11 @@
 NAME,ID,CRAFT MATERIALS:AMOUNT
-Carbone,charcoal,wood:2
-Lingotto di Ferro,iron_ingot,iron_ore:4
-Lingotto di Acciaio,steel_ingot,iron_ingot:3,flux:1,charcoal:2
-Lingotto di Starmetal,starmetal_ingot,starmetal_ore:6,flux:1,steel_ingot:2,charcoal:2
-Lingotto di Oricalco,orichalcum_ingot,orichalcum_ore:8,starmetal_ingot:2,flux:1,charcoal:2
-Lingotto di Argento,silver_ingot,silver_ore:4
-Lingotto di Oro,gold_ingot,gold_ore:5,flux:1,silver_ingot:2
-Lingotto di Platino,platinum_ingot,platinum_ore:6,flux:1,gold_ingot:2
-Lingotto di Oricalco,orichalcum_plat_ingot,orichalcum_ore:8,platinum_ingot:3,flux:1,charcoal:2
-Asmodeum,asmodeum,orichalcum_ingot:5,tolvium:1,cinnabar:1,flux:1,charcoal:2
+Carbone,charcoal,0.27,wood:2
+Lingotto di Ferro,iron_ingot,0.29,iron_ore:4
+Lingotto di Acciaio,steel_ingot,1.1,iron_ingot:3,flux:1,charcoal:2
+Lingotto di Starmetal,starmetal_ingot,6.85,starmetal_ore:6,flux:1,steel_ingot:2,charcoal:2
+Lingotto di Oricalco,orichalcum_ingot,30,orichalcum_ore:8,starmetal_ingot:2,flux:1,charcoal:2
+Lingotto di Argento,silver_ingot,0.2,silver_ore:4
+Lingotto di Oro,gold_ingot,0.8,gold_ore:5,flux:1,silver_ingot:2
+Lingotto di Platino,platinum_ingot,4.85,platinum_ore:6,flux:1,gold_ingot:2
+Lingotto di Oricalco,orichalcum_plat_ingot,30,orichalcum_ore:8,platinum_ingot:3,flux:1,charcoal:2
+Asmodeum,asmodeum,325,orichalcum_ingot:5,tolvium:1,cinnabar:1,flux:1,charcoal:2
