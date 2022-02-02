@@ -8,6 +8,7 @@ var smelter = document.getElementById("smelter");
 var loom = document.getElementById("loom");
 var tannery = document.getElementById("tannery");
 var woodshop = document.getElementById("woodshop");
+var stonecutting = document.getElementById("stonecutting");
 var arcana = document.getElementById("arcana");
 
 smelter.addEventListener("click", (_) => {
@@ -28,6 +29,11 @@ tannery.addEventListener("click", (_) => {
 woodshop.addEventListener("click", (_) => {
   cardContainer.innerHTML = "";
   woodshopResources.forEach((r) => addResource(r));
+});
+
+stonecutting.addEventListener("click", (_) => {
+  cardContainer.innerHTML = "";
+  stonecuttingResources.forEach((r) => addResource(r));
 });
 
 arcana.addEventListener("click", (_) => {

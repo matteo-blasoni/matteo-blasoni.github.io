@@ -78,6 +78,7 @@ var smelterResources = csvParser("/res/smelter_resources.csv", true);
 var loomResources = csvParser("/res/loom_resources.csv", true);
 var tanneryResources = csvParser("/res/tannery_resources.csv", true);
 var woodshopResources = csvParser("/res/woodshop_resources.csv", true);
+var stonecuttingResources = csvParser("/res/stonecutting_resources.csv", true);
 var arcanaResources = csvParser("/res/arcana_resources.csv", true);
 
 function csvParser(filePath, craftable = false) {
@@ -138,6 +139,7 @@ function searchResource(id) {
     loomResources,
     tanneryResources,
     woodshopResources,
+    stonecuttingResources,
     arcanaResources
   );
   res = craftResources.find((r) => r.Id == id);
