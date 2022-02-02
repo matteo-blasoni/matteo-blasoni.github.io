@@ -55,7 +55,6 @@ input[type="number"] {
   height: 5%;
   display: flex;
   background-color: rgb(108, 118, 119);
-  background-color: red;
   justify-content: center;
   align-items: center;
 }
@@ -85,7 +84,6 @@ input[type="number"] {
   padding: 10px;
   height: calc(95% - 20px);
   background-color: #11202c;
-  background-color: green;
 }
 
 @media (max-width: 905px) {
@@ -109,7 +107,6 @@ input[type="number"] {
   flex-wrap: wrap;
   justify-content: space-evenly;
   row-gap: 10px;
-  background-color: blue;
 }
 
 .card {
