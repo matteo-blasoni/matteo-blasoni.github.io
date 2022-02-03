@@ -205,6 +205,15 @@ input[type="number"] {
   justify-content: space-evenly;
   row-gap: 20px;
   column-gap: 30px;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.card-container::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
