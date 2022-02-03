@@ -81,34 +81,57 @@
         </div>
     </template>
 
-    <nav class="navigation">
-        <ul class="jobs-list">
-            <li>
-                <img class="job-icon" src="/images/icons/smelter.png">
-                <a id="smelter" href="#Fonderia">Fonderia</a>
-            </li>
-            <li>
-                <img class="job-icon" src="/images/icons/loom.png">
-                <a id="loom" href="#Telaio">Telaio</a>
-            </li>
-            <li>
-                <img class="job-icon" src="/images/icons/tannery.png">
-                <a id="tannery" href="#Conceria">Conceria</a>
-            </li>
-            <li>
-                <img class="job-icon" src="/images/icons/woodshop.png" alt="">
-                <a id="woodshop" href="#Falegnameria">Falegnameria</a>
-            </li>
-            <li>
-                <img class="job-icon" src="/images/icons/stonecutting.png">
-                <a id="stonecutting" href="#Tagliapietre">Tagliapietre</a>
-            </li>
-            <li>
-                <img class="job-icon" src="/images/icons/arcana.png">
-                <a id="arcana" href="#Arcana">Arcana</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="accordion">
+        <div class="accordion-content">
+            <nav class="navigation">
+                <ul class="jobs-list">
+                    <li>
+                        <a class="job-button" id="smelter" href="#Fonderia">
+                            <img class="job-icon" src="/images/icons/smelter.png">
+                            <p><b>Fonderia</b></p>
+                        </a>
+                    </li>
+                    <li>
+
+                        <a class="job-button" id="loom" href="#Telaio">
+                            <img class="job-icon" src="/images/icons/loom.png">
+                            <p><b>Telaio</b></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="job-button" id="tannery" href="#Conceria">
+                            <img class="job-icon" src="/images/icons/tannery.png">
+                            <p><b>Conceria</b></p>
+                        </a>
+                    </li>
+                    <li>
+
+                        <a class="job-button" id="woodshop" href="#Falegnameria">
+                            <img class="job-icon" src="/images/icons/woodshop.png">
+                            <p><b>Falegnameria</b></p>
+                        </a>
+                    </li>
+                    <li>
+
+                        <a class="job-button" id="stonecutting" href="#Tagliapietre">
+                            <img class="job-icon" src="/images/icons/stonecutting.png">
+                            <p><b>Tagliapietre</b></p>
+                        </a>
+                    </li>
+                    <li>
+
+                        <a class="job-button" id="arcana" href="#Arcana">
+                            <img class="job-icon" src="/images/icons/arcana.png">
+                            <p><b>Arcana</b></p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <button class="accordion-btn" type="button">
+            <div class="arrow-up"></div>
+        </button>
+    </div>
 
     <div class="container">
         <div class="card-container">

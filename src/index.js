@@ -1,8 +1,48 @@
-var craftAmount = 1000;
-
 var cardTemplate = document.getElementById("card-template");
 var costTemplate = document.getElementById("cost-template");
 var cardContainer = document.querySelector(".card-container");
+
+//#region accordion
+
+document.querySelectorAll(".accordion-btn").forEach((btn) => {
+  const accordionContent = btn.previousElementSibling;
+  accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+
+  btn.addEventListener("click", (_) => {
+    var r = document.querySelector(":root");
+
+    const accordion = btn.parentElement;
+    const btnArrow = btn.querySelector("div");
+
+    if (btnArrow.classList.contains("arrow-down")) {
+      //Panel Open
+      btnArrow.classList.remove("arrow-down");
+      btnArrow.classList.add("arrow-up");
+      accordion.style.top = 0;
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+
+      r.style.setProperty("--accordion-height", accordion.scrollHeight + "px");
+      document.querySelector(".container").style.top = 0;
+    } else {
+      //Panel Closed
+      btnArrow.classList.add("arrow-down");
+      btnArrow.classList.remove("arrow-up");
+      accordion.style.top = -accordionContent.scrollHeight + "px";
+
+      r.style.setProperty("--accordion-height", "30px");
+      document.querySelector(".container").style.top =
+        -accordion.scrollHeight + 30 + "px";
+    }
+  });
+
+  var r = document.querySelector(":root");
+  var accordion = document.querySelector(".accordion");
+  r.style.setProperty("--accordion-height", accordion.scrollHeight + "px");
+});
+
+//#endregion
+
+//#region navigation buttons
 
 var smelter = document.getElementById("smelter");
 var loom = document.getElementById("loom");
@@ -40,6 +80,8 @@ arcana.addEventListener("click", (_) => {
   cardContainer.innerHTML = "";
   arcanaResources.forEach((r) => addResource(r));
 });
+
+//#endregion
 
 smelterResources.forEach((r) => addResource(r));
 
@@ -103,6 +145,11 @@ function addResource(res) {
   });
 
   res.calculateUnitValue();
+
+  totalCostOutput.value = res.getTotalCost();
+  totalAmountOutput.value = res.getTotalAmount();
+  profitOutput.value = res.calculateProfit();
+
   cardContainer.appendChild(cardClone);
 }
 

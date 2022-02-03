@@ -9,7 +9,7 @@ class Resource {
   MarketPrice;
   IsCraftable;
   ReturnRate;
-  Amount = 1000;
+  Amount = 100;
   CraftMaterials = [];
 
   #totalAmount;
