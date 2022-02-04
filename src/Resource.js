@@ -29,7 +29,7 @@ class Resource {
       this.#totalCost = 0;
 
       this.CraftMaterials.forEach((cm) => {
-        var matPrice = searchResource(cm.Id).MarketPrice;
+        var matPrice = searchResource(cm.Id).getUnitValue();
 
         this.#totalCost += matPrice * cm.Amount * this.Amount;
       });
@@ -80,6 +80,16 @@ var tanneryResources = csvParser("/res/tannery_resources.csv", true);
 var woodshopResources = csvParser("/res/woodshop_resources.csv", true);
 var stonecuttingResources = csvParser("/res/stonecutting_resources.csv", true);
 var arcanaResources = csvParser("/res/arcana_resources.csv", true);
+
+var craftResources = smelterResources.concat(
+  loomResources,
+  tanneryResources,
+  woodshopResources,
+  stonecuttingResources,
+  arcanaResources
+);
+
+craftResources.forEach((res) => res.calculateUnitValue());
 
 function csvParser(filePath, craftable = false) {
   var csvText;
